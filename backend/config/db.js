@@ -7,7 +7,7 @@ export const connectDB = async () => {
             throw new Error('MONGODB_URI is not defined in environment variables');
         }
 
-        const conn = await mongoose.connect(`${dbURI}/notes-app`, {
+        const conn = await mongoose.connect(`${dbURI}`, {
             useNewUrlParser: true,
             useUnifiedTopology: true
         })
